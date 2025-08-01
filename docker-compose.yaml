@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/app.Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - data
+    volumes:
+      - titanic_data:/data
+    environment:
+      - CONFIG_FILE=config.yaml
+      - DB_PATH=/data/titanic.db  # if using SQLite
+
+  data:
+    build:
+      context: .
+      dockerfile: docker/data.Dockerfile
+    volumes:
+      - titanic_data:/data
+    command: tail -f /dev/null  # Keeps it alive just to hold the volume
+
+volumes:
+  titanic_data:

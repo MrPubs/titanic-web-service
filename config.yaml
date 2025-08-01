@@ -1,0 +1,3 @@
+data_source: sqlite
+sqlite_path: /data/titanic.db
+csv_path: /data/titanic.csv
