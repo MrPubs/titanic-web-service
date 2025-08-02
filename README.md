@@ -25,3 +25,4 @@ Supports querying by passenger ID, selective field access, percentile-based fare
 ```bash
 git clone 
 cd titanic-web-service
+docker-compose up --build
