@@ -46,8 +46,7 @@ def steralize_df(df: pd.DataFrame) -> pd.DataFrame:
     :param df: input df to clean
     :return: cleaned data
     '''
-    # return df.replace([np.nan], None)  # replace NaN's with None
-    return df
+    return df.replace([np.nan], None)  # replace NaN's with None
 
 if __name__ == '__main__':
     pass
