@@ -23,5 +23,5 @@ Supports querying by passenger ID, selective field access, percentile-based fare
 ### 1. Clone the repo
 
 ```bash
-git clone <your repo URL>
+git clone 
 cd titanic-web-service
